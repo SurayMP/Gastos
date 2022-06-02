@@ -1,33 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="app.js" defer></script>
-    <title>Calculator</title>
-</head>
-<body>
-    <div class="container-sm border pb-5">
-        <div class="bg-primary text-light text-center py-4">
-            <h1>App de Gastos</h1>
-            <h5>Ingresa cuanto pagó cada persona</h5>
-        </div>
-        <form id="form-gastos" class="container px-4">
-            <input name="nombre" type="text" class="form-control mt-2" placeholder="Nombre">
-            <input name="pago" type="number" class="form-control mt-2" placeholder="Ingresa cuanto pago">
-            <button id='enviar' class="btn btn-danger my-3">Enviar</button>
-        </form>
-        <div class="px-4">
-            <div id="personas_pagando"></div>
-            <!-- <p class="border p-2 my-0">juan</p>
-            <p class="border p-2 my-0">juan</p>
-            <p class="border p-2 my-0">juan</p> -->
-            <p id="total" class="mt-2 fw-semibold">Total: <strong id="total-p"></strong> </p>
-            <p id="result" class="fw-semibold" >A cada uno le toca aportar <strong id="pago-cada-p"></strong> </p>
-        </div>
-
-    </div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Gastos</title>
+  </head>
+  <header class="header">
+    <h1>APP DE GASTOS</h1>
+    <p>Ingresá cuanto pagó cada persona</p>
+  </header>
+  <div class="form-floating-mb-3">
+    <label for="NombreInput"
+      >Nombre:
+      <input
+        type="text"
+        class="form-control"
+        id="NombreInput"
+        placeholder="Nombre"
+    /></label>
+    <label for="MontoInput"
+      >Monto:
+      <input
+        type="number"
+        class="form-control"
+        id="MontoInput"
+        placeholder="Monto"
+    /></label>
+  </div>
+  <body>
+    <button onclick= agregarPersona()>Agregar</button>
+    <div id="Total-de-cada-uno"> </div>
+    <h5 id="Total">Total:</h5>
+    <h5 id="Division">A cada uno le toca poner:</h5>
+    <script src="index.js"></script>
+  </body>
 </html>
