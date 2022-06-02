@@ -8,12 +8,12 @@ form.onsubmit=(e)=>{
     const nombre = form.nombre.value
     const totalp= $('#total-p')
     const divPersonasPagando = $('#personas_pagando')
-    personas.push(Number(pago))
-
-    divPersonasPagando.appendChild(personaInfoPago(nombre,pago))
-
-    totalp.innerText= Number(totalp.innerText) + pago
     const pagoPersona= $('#pago-cada-p')
+
+    personas.push(Number(pago))
+    divPersonasPagando.appendChild(personaInfoPago(nombre,pago))
+    totalp.innerText= (Number(totalp.innerText) + pago).toFixed(2)
+    pagoPersona.innerText = (Number(totalp.innerText)/personas.length).toFixed(2)
 }
 
 function personaInfoPago(nombre,pago){

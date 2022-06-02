@@ -15,8 +15,8 @@
             <h5>Ingresa cuanto pagó cada persona</h5>
         </div>
         <form id="form-gastos" class="container px-4">
-            <input name="nombre" type="text" class="form-control mt-2" placeholder="Nombre">
-            <input name="pago" type="number" class="form-control mt-2" placeholder="Ingresa cuanto pago">
+            <input name="nombre" type="text" class="form-control mt-2" placeholder="Nombre" required>
+            <input name="pago" type="number" class="form-control mt-2" placeholder="Ingresa cuanto pago" required>
             <button id='enviar' class="btn btn-danger my-3">Enviar</button>
         </form>
         <div class="px-4">
@@ -24,8 +24,8 @@
             <!-- <p class="border p-2 my-0">juan</p>
             <p class="border p-2 my-0">juan</p>
             <p class="border p-2 my-0">juan</p> -->
-            <p id="total" class="mt-2 fw-semibold">Total: <strong id="total-p"></strong> </p>
-            <p id="result" class="fw-semibold" >A cada uno le toca aportar <strong id="pago-cada-p"></strong> </p>
+            <p id="total" class="mt-2 fw-semibold">Total: $<strong id="total-p"></strong> </p>
+            <p id="result" class="fw-semibold" >A cada uno le toca aportar $<strong id="pago-cada-p"></strong> </p>
         </div>
 
     </div>
