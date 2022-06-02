@@ -14,9 +14,15 @@
             <h1>App de Gastos</h1>
             <h5>Ingresa cuanto pagó cada persona</h5>
         </div>
-        <form id="form-gastos" class="container px-4">
+        <form id="form-gastos" class="container form-floating mb-3">
+          <div class="form-floating mb-3">
             <input name="nombre" type="text" class="form-control mt-2" placeholder="Nombre" required>
+            <label for="floatingInputValue">Nombre</label>
+        </div>
+        <div class="form-floating mb-3">
             <input name="pago" type="number" class="form-control mt-2" placeholder="Ingresa cuanto pago" required>
+            <label for="floatingInputValue">$</label>
+        </div>
             <button id='enviar' class="btn btn-danger my-3">Enviar</button>
         </form>
         <div class="px-4">
