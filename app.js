@@ -14,6 +14,8 @@ form.onsubmit=(e)=>{
     divPersonasPagando.appendChild(personaInfoPago(nombre,pago))
     totalp.innerText= (Number(totalp.innerText) + pago).toFixed(2)
     pagoPersona.innerText = (Number(totalp.innerText)/personas.length).toFixed(2)
+    form.nombre.value = null;
+    form.pago.value = null;
 }
 
 function personaInfoPago(nombre,pago){
