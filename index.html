@@ -1,122 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
     <script src="app.js" defer></script>
     <title>Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container-sm border pb-5">
-        <div class="bg-primary text-light text-center py-4">
-            <h1>App de Gastos</h1>
-            <h5>Ingresa cuanto pagó cada persona</h5>
-        </div>
-        <form id="form-gastos" class="container form-floating mb-3">
-          <div class="form-floating mb-3">
-            <input name="nombre" type="text" class="form-control mt-2" placeholder="Nombre" required>
-            <label for="floatingInputValue">Nombre</label>
+      <div class="bg-primary text-light text-center py-4">
+        <h1>App de Gastos</h1>
+        <h5>Ingresa cuanto pagó cada persona</h5>
+      </div>
+      <form id="form-gastos" class="container form-floating mb-3">
+        <div class="form-floating mb-3">
+          <input
+            name="nombre"
+            type="text"
+            class="form-control mt-2"
+            placeholder="Nombre"
+            required
+          />
+          <label for="floatingInputValue">Nombre</label>
         </div>
         <div class="form-floating mb-3">
-            <input name="pago" type="number" class="form-control mt-2" placeholder="Ingresa cuanto pago" required>
-            <label for="floatingInputValue">$</label>
+          <input
+            name="pago"
+            type="number"
+            class="form-control mt-2"
+            placeholder="Ingresa cuanto pago"
+            required
+          />
+          <label for="floatingInputValue">$</label>
         </div>
-            <button id='enviar' class="btn btn-danger my-3">Enviar</button>
-        </form>
-        <div class="px-4">
-            <div id="personas_pagando"></div>
-            <!-- <p class="border p-2 my-0">juan</p>
+        <button id="enviar" class="btn btn-danger my-3">Enviar</button>
+      </form>
+      <div class="px-4">
+        <div id="personas_pagando"></div>
+        <!-- <p class="border p-2 my-0">juan</p>
             <p class="border p-2 my-0">juan</p>
             <p class="border p-2 my-0">juan</p> -->
-            <p id="total" class="mt-2 fw-semibold">Total: $<strong id="total-p"></strong> </p>
-            <p id="result" class="fw-semibold" >A cada uno le toca aportar $<strong id="pago-cada-p"></strong> </p>
-        </div>
-
+        <p id="total" class="mt-2 fw-semibold">
+          Total: $<strong id="total-p"></strong>
+        </p>
+        <p id="result" class="fw-semibold">
+          A cada uno le toca aportar $<strong id="pago-cada-p"></strong>
+        </p>
+      </div>
     </div>
-<div class="container my-5">
-    <footer class="text-center text-lg-start text-dark" style="background-color: #fff" >
+    <div class="container my-5">
+      <footer
+        class="text-center text-lg-start text-dark"
+        style="background-color: #fff"
+      >
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold">ITbank</h6>
+                <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+                <p>La idea es poder dividir equitativamente los gastos.</p>
+              </div>
+              <!-- Grid column -->
 
-   
-      <section class="">
-        <div class="container text-center text-md-start mt-5">
-          <!-- Grid row -->
-          <div class="row mt-3">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <!-- Content -->
-              <h6 class="text-uppercase fw-bold">ITbank</h6>
-              <hr
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Productos</h6>
+                <hr
                   class="mb-4 mt-0 d-inline-block mx-auto"
                   style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
-              <p>
-               La idea es poder dividir equitativamente los gastos.
-              </p>
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Productos</h6>
-              <hr
+                />
+                <p>
+                  <a href="#!" class="text-dark">App de Gastos</a>
+                </p>
+              </div>
+
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Links</h6>
+                <hr
                   class="mb-4 mt-0 d-inline-block mx-auto"
                   style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
-              <p>
-                <a href="#!" class="text-dark">App de Gastos</a>
-              </p>
-             
-            </div>
-            
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Links</h6>
-              <hr
+                />
+                <p>
+                  <a href="#!" class="text-dark">Cuenta</a>
+                </p>
+
+                <p>
+                  <a href="#!" class="text-dark">Ayuda</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Contacto</h6>
+                <hr
                   class="mb-4 mt-0 d-inline-block mx-auto"
                   style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
-              <p>
-                <a href="#!" class="text-dark">Cuenta</a>
-              </p>
-            
-             
-              <p>
-                <a href="#!" class="text-dark">Ayuda</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Contacto</h6>
-              <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
-              <p><i class="fas fa-home mr-3"></i> Argentina</p>
-              <p><i class="fas fa-envelope mr-3"></i> info@itbank.com</p>
-              <p><i class="fas fa-phone mr-3"></i> 122334</p>
-              <p><i class="fas fa-print mr-3"></i> 123459</p>
+                />
+                <p><i class="fas fa-home mr-3"></i> Argentina</p>
+                <p><i class="fas fa-envelope mr-3"></i> info@itbank.com</p>
+                <p><i class="fas fa-phone mr-3"></i> 122334</p>
+                <p><i class="fas fa-print mr-3"></i> 123459</p>
+              </div>
             </div>
           </div>
+        </section>
+
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          © 2022 Copyright:
+          <a class="text-dark">ITbank.com</a>
         </div>
-      </section>
- 
-      <div
-           class="text-center p-3"
-           style="background-color: rgba(0, 0, 0, 0.2)"
-           >
-        © 2022 Copyright:
-        <a class="text-dark">ITbank.com</a
-          >
-      </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-  </div>
-</body>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </div>
+  </body>
 </html>
