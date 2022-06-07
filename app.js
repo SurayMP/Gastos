@@ -10,8 +10,13 @@ form.onsubmit=(e)=>{
     const divPersonasPagando = $('#personas_pagando')
     const pagoPersona= $('#pago-cada-p')
 
-    personas.push(Number(pago))
-    divPersonasPagando.appendChild(personaInfoPago(nombre,pago))
+    personas.push({
+        pago:Number(pago),
+        persona:nombre,
+        fecha:Date.now()
+    })
+
+    appendAlElementoUsandoArray(divPersonasPagando,personas)
     totalp.innerText= (Number(totalp.innerText) + pago).toFixed(2)
     pagoPersona.innerText = (Number(totalp.innerText)/personas.length).toFixed(2)
 }
@@ -25,3 +30,9 @@ function personaInfoPago(nombre,pago){
     return div
 }
 
+function appendAlElementoUsandoArray(htmlElemnt,array){
+    htmlElemnt.innerHTML =''
+    for(let elem of array ){
+        htmlElemnt.appendChild(personaInfoPago(elem.persona,elem.pago))
+    }
+}
